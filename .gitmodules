@@ -1,4 +1,3 @@
-
 [submodule "Code/ECE4300-sha256-microblaze"]
 	path = Code/ECE4300-sha256-microblaze
 	url = https://github.com/pixelatedknight27/ECE4300-sha256-microblaze.git
