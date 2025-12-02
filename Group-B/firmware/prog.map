@@ -1,0 +1,90 @@
+
+Discarded input sections
+
+ .text          0x00000000        0x0 C:\Users\CARSON~1\AppData\Local\Temp\ccmL6t6q.o
+ .data          0x00000000        0x0 C:\Users\CARSON~1\AppData\Local\Temp\ccmL6t6q.o
+ .bss           0x00000000        0x0 C:\Users\CARSON~1\AppData\Local\Temp\ccmL6t6q.o
+ .text          0x00000000        0x0 C:\Users\CARSON~1\AppData\Local\Temp\cck3am9U.o
+ .data          0x00000000        0x0 C:\Users\CARSON~1\AppData\Local\Temp\cck3am9U.o
+ .bss           0x00000000        0x0 C:\Users\CARSON~1\AppData\Local\Temp\cck3am9U.o
+ .trap          0x00000000       0xac C:\Users\CARSON~1\AppData\Local\Temp\cck3am9U.o
+ .rodata        0x00000000       0x15 C:\Users\CARSON~1\AppData\Local\Temp\cck3am9U.o
+ .riscv.attributes
+                0x00000000       0x31 C:\Users\CARSON~1\AppData\Local\Temp\cck3am9U.o
+ .text          0x00000000        0x0 C:\Users\CARSON~1\AppData\Local\Temp\ccSBW6Su.o
+ .data          0x00000000        0x0 C:\Users\CARSON~1\AppData\Local\Temp\ccSBW6Su.o
+ .bss           0x00000000        0x0 C:\Users\CARSON~1\AppData\Local\Temp\ccSBW6Su.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x80000000         0x00010000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD C:\Users\CARSON~1\AppData\Local\Temp\ccmL6t6q.o
+LOAD C:\Users\CARSON~1\AppData\Local\Temp\cck3am9U.o
+LOAD C:\Users\CARSON~1\AppData\Local\Temp\ccSBW6Su.o
+START GROUP
+LOAD c:/users/carson quesada/xpack-riscv-none-elf-gcc-11.5.0-2/bin/../lib/gcc/riscv-none-elf/11.5.0/../../../../riscv-none-elf/lib/rv32im/ilp32\libc.a
+LOAD c:/users/carson quesada/xpack-riscv-none-elf-gcc-11.5.0-2/bin/../lib/gcc/riscv-none-elf/11.5.0/rv32im/ilp32\libgcc.a
+END GROUP
+                0x80000000                        . = ORIGIN (RAM)
+
+.text           0x80000000      0xcba
+ *(.init)
+ .init          0x80000000       0x2c C:\Users\CARSON~1\AppData\Local\Temp\ccmL6t6q.o
+                0x80000000                _start
+ *(.text*)
+ .text.putdec64
+                0x8000002c       0x72 C:\Users\CARSON~1\AppData\Local\Temp\ccSBW6Su.o
+ .text.measure_empty_loop
+                0x8000009e       0x82 C:\Users\CARSON~1\AppData\Local\Temp\ccSBW6Su.o
+ .text.wait_for_press_release.isra.0
+                0x80000120       0x3e C:\Users\CARSON~1\AppData\Local\Temp\ccSBW6Su.o
+ .text.puthex32
+                0x8000015e       0x38 C:\Users\CARSON~1\AppData\Local\Temp\ccSBW6Su.o
+                0x8000015e                puthex32
+ .text.startup.main
+                0x80000196      0xb24 C:\Users\CARSON~1\AppData\Local\Temp\ccSBW6Su.o
+                0x80000196                main
+                0x80000cc0                        . = ALIGN (0x8)
+
+.rodata         0x80000cc0      0x320
+ *(.rodata*)
+ .rodata.main.str1.4
+                0x80000cc0      0x27c C:\Users\CARSON~1\AppData\Local\Temp\ccSBW6Su.o
+ *fill*         0x80000f3c        0x4 
+ .rodata.p10_64
+                0x80000f40       0xa0 C:\Users\CARSON~1\AppData\Local\Temp\ccSBW6Su.o
+
+.rela.dyn       0x80000fe0        0x0
+ .rela.init     0x80000fe0        0x0 C:\Users\CARSON~1\AppData\Local\Temp\ccmL6t6q.o
+
+.data
+ *(.data*)
+
+.bss            0x80000fe0      0x400
+                0x80000fe0                        __bss_start = .
+ *(.bss*)
+ .bss.buf.0     0x80000fe0      0x400 C:\Users\CARSON~1\AppData\Local\Temp\ccSBW6Su.o
+ *(COMMON)
+                0x800013e0                        __bss_end = .
+                0x800013e0                        . = ALIGN (0x4)
+                0x800013e0                        _heap_start = .
+                0x80010000                        _heap_end = (ORIGIN (RAM) + LENGTH (RAM))
+                0x80010000                        _stack_top = (ORIGIN (RAM) + LENGTH (RAM))
+                [!provide]                        PROVIDE (_end = _heap_start)
+OUTPUT(prog.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x33
+ .riscv.attributes
+                0x00000000       0x2d C:\Users\CARSON~1\AppData\Local\Temp\ccmL6t6q.o
+ .riscv.attributes
+                0x0000002d       0x2f C:\Users\CARSON~1\AppData\Local\Temp\ccSBW6Su.o
+
+.comment        0x00000000       0x33
+ .comment       0x00000000       0x33 C:\Users\CARSON~1\AppData\Local\Temp\ccSBW6Su.o
+                                 0x34 (size before relaxing)
