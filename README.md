@@ -24,12 +24,13 @@ All hardware and software implementations match exactly in nodes expanded, path 
 - Verified across 7 test scenarios
 - Real-time visualization via Python interface
 
-  ## Repository Structure
-  1. Python
-     - Contains the software reference implementation of A*.
-       Used for verifying hardware correctness and generating expected outputs.
-  2. Verilog
-     - Hardware implementation of the accelerator.
-       Includes:
-       1. astar_top - top-level module and logic components
-       2. astar_tb - testbench used for simulation and verification
+## Repository Structure
+  1. Code
+    1. Python
+       - Contains the software reference implementation of A*.
+         Used for verifying hardware correctness and generating expected outputs.
+    2. Verilog
+       - Hardware implementation of the accelerator.
+         Includes:
+         1. astar_top - top-level module and logic components
+         2. astar_tb - testbench used for simulation and verification
