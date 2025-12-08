@@ -26,11 +26,11 @@ All hardware and software implementations match exactly in nodes expanded, path 
 
 ## Repository Structure
   1. Code
-    a. Python
-       - Contains the software reference implementation of A*.
+      1. Python
+         - Contains the software reference implementation of A*.
          Used for verifying hardware correctness and generating expected outputs.
-    b. Verilog
-       - Hardware implementation of the accelerator.
+      2. Verilog
+         - Hardware implementation of the accelerator.
          Includes:
          1. astar_top - top-level module and logic components
          2. astar_tb - testbench used for simulation and verification
