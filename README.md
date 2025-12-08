@@ -1,1 +1,1 @@
-# ECE4300_FALL2025
+# FPGA vs Python A* Pathfinding Accelerator — Group E Final Project Submission
