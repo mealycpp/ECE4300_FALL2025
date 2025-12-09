@@ -12,7 +12,7 @@ The design supports 8-connected omnidirectional movement, uses the Octile Distan
 The system includes:
 - Verilog Hardware Accelerator (optimized for 16×16 grids)
 - Python Reference Implementation for correctness verification
-- Interactive Web-Based Visualizer for demonstrating algorithm behavior
+- Python Visualizer for demonstrating algorithm behavior
 - Seven Comprehensive Test Mazes evaluating correctness, efficiency, and performance
 All hardware and software implementations match exactly in nodes expanded, path quality, and optimality.
 
