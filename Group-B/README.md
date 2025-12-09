@@ -18,7 +18,7 @@ A single, common benchmarking program is used across both cores. The existence o
 
 ## Project Demo
 Youtube video link for the project demo:
-https://youtube.com/shorts/O_etV9ZgsBk?feature=share
+https://youtu.be/fAVK4QRBgcg
 
 ## Repository Structure
 
