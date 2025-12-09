@@ -37,7 +37,7 @@ All hardware and software implementations match exactly in nodes expanded, path 
   2. Documentation
      - Contains IEEE formatted paper and rough draft powerpoint presentation
   3. Vizualizer
-     - Web-based visualizer for interacting with A* pathfinding.
+     - Python visualizer for interacting with A* pathfinding.
      - Supports grid editing, animated search visualization, and comparison modes.
 
 ## Test Cases
