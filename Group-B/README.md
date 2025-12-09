@@ -16,6 +16,10 @@ All cores are implemented as RV32IMC designs.
 
 A single, common benchmarking program is used across both cores. The existence of separate firmware folders does not indicate different benchmark tests—the benchmark logic is identical. Differences arise only from each core’s integration requirements, such as SoC structure, I/O handling, memory mapping, and the expected HEX file format.
 
+## Project Demo
+Youtube video link for the project demo:
+https://youtube.com/shorts/O_etV9ZgsBk?feature=share
+
 ## Repository Structure
 
 ### 1. PicoRV32 Firmware
