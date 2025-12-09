@@ -4,6 +4,9 @@
 - Changwe Musonda
 - Emily Morales
 - Kevin Wang
+- 
+## Video Link
+https://youtu.be/ZllrozmBUEA
 
 ## Project Overview
 This project implements and benchmarks a hardware-accelerated A* pathfinding engine on a Xilinx Artix-7 FPGA.
