@@ -7,31 +7,29 @@
 - Derek Jacoby
 
 ## Project Overview
-This final project benchmarks four RISC-V cores on the Nexys A7 FPGA board. The cores being benchmarked are:
+This project benchmarks multiple RISC-V cores on the Nexys A7 FPGA board. The cores evaluated in this submission are:
 
 - PicoRV32 (YosysHQ)
-- Ibex (lowRISC)
-- VexRiscv (h2ozrw)
-- cv32e40p (OpenHW Group)
+- VexRiscv (SpinalHDL)
 
-All cores are built as RV32IMC implementations.
+All cores are implemented as RV32IMC designs.
+
+A single, common benchmarking program is used across both cores. The existence of separate firmware folders does not indicate different benchmark tests—the benchmark logic is identical. Differences arise only from each core’s integration requirements, such as SoC structure, I/O handling, memory mapping, and the expected HEX file format.
 
 ## Repository Structure
 
-1. **Firmware**  
-   Contains the files necessary to build the benchmarking test as a HEX file. Benchmark code is located in `main.c` and can be built using the `build.bat` script.
+### 1. PicoRV32 Firmware
+Contains the files required to build the benchmarking program for the PicoRV32-based system. Although this folder is separate, it produces the same benchmark as the VexRiscv firmware; the build process differs only because of PicoRV32’s architecture and required firmware format. The firmware can be built using the included `build.bat` script.
 
-2. **PicoRV32 Test**  
-   Vivado project for benchmarking the PicoRV32 core on the Nexys A7.
+### 2. VexRiscv Firmware
+Contains the files required to build the same benchmarking program for the VexRiscv-based system. This folder exists to support VexRiscv-specific integration details (such as the Murax SoC layout, memory map, and I/O). The firmware can be built using the included `build.bat` script.
 
-3. **Ibex Test**  
-   Vivado project for benchmarking the Ibex core on the Nexys A7 (Coming Soon).
+### 3. PicoRV32 Test
+Vivado project for synthesizing and benchmarking the PicoRV32 core on the Nexys A7.
 
-4. **VexRiscv Test**  
-   Vivado project for benchmarking the VexRiscv core on the Nexys A7 (Coming Soon).
+### 4. VexRiscv Test
+Vivado project for synthesizing and benchmarking the VexRiscv core on the Nexys A7.  
+(Coming soon.)
 
-5. **cv32e40p Test**  
-   Vivado project for benchmarking the CV32E40P core on the Nexys A7 (Coming Soon).
-
-6. **Documentation**  
-   Contains the report and demonstration materials. Refer to this folder for more information about the project.
+### 5. Documentation
+Contains the final report, supporting notes, diagrams, benchmark methodology, and demonstration materials.

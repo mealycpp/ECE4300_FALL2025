@@ -1,0 +1,85 @@
+
+Discarded input sections
+
+ .text          0x00000000        0x0 build\crt0.o
+ .data          0x00000000        0x0 build\crt0.o
+ .bss           0x00000000        0x0 build\crt0.o
+ .text          0x00000000        0x0 build\main.o
+ .data          0x00000000        0x0 build\main.o
+ .bss           0x00000000        0x0 build\main.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x80000000         0x00010000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD build\crt0.o
+LOAD build\main.o
+START GROUP
+LOAD c:/users/carson quesada/xpack-riscv-none-elf-gcc-11.5.0-2/bin/../lib/gcc/riscv-none-elf/11.5.0/../../../../riscv-none-elf/lib/rv32i/ilp32\libc.a
+LOAD c:/users/carson quesada/xpack-riscv-none-elf-gcc-11.5.0-2/bin/../lib/gcc/riscv-none-elf/11.5.0/rv32i/ilp32\libgcc.a
+END GROUP
+                0x80000000                        . = ORIGIN (RAM)
+
+.text           0x80000000     0x137c
+ *(.init)
+ .init          0x80000000       0x34 build\crt0.o
+                0x80000000                _start
+ *(.text*)
+ .text.btn_continue_pressed
+                0x80000034       0x10 build\main.o
+ .text.btn_skip_pressed
+                0x80000044       0x14 build\main.o
+ .text.puthex32
+                0x80000058       0x64 build\main.o
+ .text.putdec64
+                0x800000bc       0x98 build\main.o
+ .text.measure_empty_loop
+                0x80000154       0x90 build\main.o
+ .text.wait_for_press_release.isra.0
+                0x800001e4       0x88 build\main.o
+ .text.startup.main
+                0x8000026c     0x1110 build\main.o
+                0x8000026c                main
+                0x80001380                        . = ALIGN (0x8)
+
+.rodata         0x80001380      0x320
+ *(.rodata*)
+ .rodata.main.str1.4
+                0x80001380      0x27c build\main.o
+ *fill*         0x800015fc        0x4 
+ .rodata.p10_64
+                0x80001600       0xa0 build\main.o
+
+.rela.dyn       0x800016a0        0x0
+ .rela.init     0x800016a0        0x0 build\crt0.o
+
+.data
+ *(.data*)
+
+.bss            0x800016a0      0x400
+                0x800016a0                        __bss_start = .
+ *(.bss*)
+ .bss.buf.0     0x800016a0      0x400 build\main.o
+ *(COMMON)
+                0x80001aa0                        __bss_end = .
+                0x80001aa0                        . = ALIGN (0x4)
+                0x80001aa0                        _heap_start = .
+                0x80010000                        _heap_end = (ORIGIN (RAM) + LENGTH (RAM))
+                0x80010000                        _stack_top = (ORIGIN (RAM) + LENGTH (RAM))
+                [!provide]                        PROVIDE (_end = _heap_start)
+OUTPUT(build\prog.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x1c
+ .riscv.attributes
+                0x00000000       0x1a build\crt0.o
+ .riscv.attributes
+                0x0000001a       0x1c build\main.o
+
+.comment        0x00000000       0x33
+ .comment       0x00000000       0x33 build\main.o
+                                 0x34 (size before relaxing)

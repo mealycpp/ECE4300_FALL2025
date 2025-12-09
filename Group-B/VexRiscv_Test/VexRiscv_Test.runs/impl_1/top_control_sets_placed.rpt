@@ -1,0 +1,131 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Sat Dec  6 19:51:19 2025
+| Host         : MSI running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    53 |
+|    Minimum number of control sets                        |    53 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    84 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    53 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     9 |
+| >= 6 to < 8        |     4 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    35 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             300 |          117 |
+| No           | No                    | Yes                    |             188 |           79 |
+| No           | Yes                   | No                     |              22 |            8 |
+| Yes          | No                    | No                     |             939 |          360 |
+| Yes          | No                    | Yes                    |             226 |           80 |
+| Yes          | Yes                   | No                     |              97 |           26 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|      Clock Signal     |                                                            Enable Signal                                                            |                                          Set/Reset Signal                                          | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  clk_100mhz_IBUF_BUFG | murax_inst/jtagBridge_1/flowCCUnsafeByToggle_1/outputArea_flow_valid                                                                |                                                                                                    |                1 |              2 |         2.00 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_uartCtrl/uartCtrl_1/rx/stateMachine_parity                                                                        |                                                                                                    |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_uartCtrl/uartCtrl_1_io_read_queueWithOccupancy/io_push_fire__0                                                    | murax_inst/resetCtrl_systemReset                                                                   |                2 |              5 |         2.50 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_apbBridge/E[0]                                                                                                    | murax_inst/resetCtrl_systemReset                                                                   |                2 |              5 |         2.50 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_uartCtrl/uartCtrl_1_io_read_queueWithOccupancy/logic_pop_sync_readPort_cmd_valid                                  | murax_inst/resetCtrl_systemReset                                                                   |                2 |              5 |         2.50 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu/CsrPlugin_mcause_exceptionCode[3]_i_1_n_0                                                                     |                                                                                                    |                3 |              5 |         1.67 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_uartCtrl/uartCtrl_1/tx/logic_pop_addressGen_rValid_reg_0[0]                                                       | murax_inst/resetCtrl_systemReset                                                                   |                1 |              5 |         5.00 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_apbBridge/io_pipelinedMemoryBus_cmd_rData_address_reg[4]_3[0]                                                     | murax_inst/resetCtrl_systemReset                                                                   |                3 |              5 |         1.67 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu/execute_LightShifterPlugin_isActive40_out                                                                     |                                                                                                    |                3 |              5 |         1.67 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_uartCtrl/uartCtrl_1/tx/logic_pop_sync_readPort_cmd_valid                                                          | murax_inst/resetCtrl_systemReset                                                                   |                1 |              5 |         5.00 |
+|  clk_100mhz_IBUF_BUFG |                                                                                                                                     | murax_inst/apb3Router_1/selIndex_reg[1]_0                                                          |                4 |              6 |         1.50 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/sel                                                                                                                      | murax_inst/io_asyncReset_buffercc/buffers_1                                                        |                2 |              6 |         3.00 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu/IBusSimplePlugin_rspJoin_rspBuffer_c/fifo/execute_arbitration_isValid_reg                                     | murax_inst/system_cpu/decode_to_execute_SRC1[11]_i_1_n_0                                           |                3 |              7 |         2.33 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_uartCtrl/uartCtrl_1/rx/break_counter[6]_i_1_n_0                                                                   | murax_inst/resetCtrl_systemReset                                                                   |                2 |              7 |         3.50 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_uartCtrl/uartCtrl_1/tx/logic_pop_sync_readPort_cmd_valid                                                          |                                                                                                    |                2 |              8 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/jtagBridge_1/flowCCUnsafeByToggle_1/outputArea_flow_m2sPipe_valid_reg_2[0]                                               |                                                                                                    |                3 |              8 |         2.67 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_uartCtrl/uartCtrl_1_io_read_queueWithOccupancy/logic_pop_sync_readPort_cmd_valid                                  |                                                                                                    |                2 |              8 |         4.00 |
+|  clk_100mhz_IBUF_BUFG |                                                                                                                                     | murax_inst/resetCtrl_mainClkReset                                                                  |                7 |             13 |         1.86 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_timer/prescaler_1/timerA_io_tick                                                                                  | murax_inst/system_apbBridge/timerA_io_clear                                                        |                4 |             16 |         4.00 |
+|  clk_100mhz_IBUF_BUFG |                                                                                                                                     | murax_inst/system_timer/prescaler_1/when_Prescaler_l17                                             |                4 |             16 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_uartCtrl/uartCtrl_1_io_read_queueWithOccupancy/io_push_fire__0                                                    |                                                                                                    |                2 |             16 |         8.00 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_timer/prescaler_1/timerB_io_tick                                                                                  | murax_inst/system_timer/timerB/timerB_io_clear                                                     |                4 |             16 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_apbBridge/io_pipelinedMemoryBus_cmd_rData_address_reg[1]_2[0]                                                     |                                                                                                    |                5 |             16 |         3.20 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_apbBridge/io_pipelinedMemoryBus_cmd_rData_address_reg[1]_0[0]                                                     |                                                                                                    |                3 |             16 |         5.33 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_apbBridge/io_pipelinedMemoryBus_cmd_rData_address_reg[2]_5[0]                                                     |                                                                                                    |                4 |             16 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu/IBusSimplePlugin_rspJoin_rspBuffer_c/fifo/_zz_IBusSimplePlugin_iBusRsp_stages_1_output_m2sPipe_valid_reg_1[0] |                                                                                                    |               13 |             16 |         1.23 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_apbBridge/io_pipelinedMemoryBus_cmd_rData_address_reg[4]_3[0]                                                     |                                                                                                    |                2 |             16 |         8.00 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu/IBusSimplePlugin_rspJoin_rspBuffer_c/fifo/execute_arbitration_isValid_reg                                     | murax_inst/system_cpu/decode_to_execute_SRC1[31]_i_1_n_0                                           |                9 |             20 |         2.22 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu/CsrPlugin_mtvec_base                                                                                          | murax_inst/resetCtrl_systemReset                                                                   |               16 |             30 |         1.88 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu/IBusSimplePlugin_rspJoin_rspBuffer_c/fifo/E[0]                                                                | murax_inst/resetCtrl_systemReset                                                                   |               10 |             31 |         3.10 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu/memory_DivPlugin_div_result                                                                                   |                                                                                                    |                8 |             32 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu/memory_DivPlugin_rs1[31]_i_1_n_0                                                                              |                                                                                                    |                8 |             32 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu/when_Pipeline_l124_2                                                                                          |                                                                                                    |               11 |             32 |         2.91 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu/when_Pipeline_l124_49                                                                                         |                                                                                                    |               18 |             32 |         1.78 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu/CsrPlugin_mepc[31]_i_1_n_0                                                                                    |                                                                                                    |               16 |             32 |         2.00 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu/CsrPlugin_mscratch                                                                                            |                                                                                                    |               13 |             32 |         2.46 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu/CsrPlugin_mtval[31]_i_1_n_0                                                                                   |                                                                                                    |               16 |             32 |         2.00 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu/IBusSimplePlugin_decodePc_pcReg[31]_i_1_n_0                                                                   | murax_inst/resetCtrl_systemReset                                                                   |                8 |             32 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu/IBusSimplePlugin_rspJoin_rspBuffer_c/fifo/io_push_rData_inst[31]_i_1_n_0                                      |                                                                                                    |               19 |             32 |         1.68 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_apbBridge/io_pipelinedMemoryBus_cmd_rData_address_reg[2]_4[0]                                                     | murax_inst/resetCtrl_systemReset                                                                   |               10 |             32 |         3.20 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu/p_2_out[0]                                                                                                    | murax_inst/resetCtrl_systemReset                                                                   |               12 |             32 |         2.67 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_apbBridge/io_pipelinedMemoryBus_cmd_rData_address_reg[2]_6[0]                                                     |                                                                                                    |               13 |             32 |         2.46 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu/p_2_out[32]                                                                                                   | murax_inst/resetCtrl_systemReset                                                                   |               11 |             32 |         2.91 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu/IBusSimplePlugin_rspJoin_rspBuffer_c/fifo/memory_DivPlugin_rs1[0]                                             | murax_inst/system_cpu/IBusSimplePlugin_rspJoin_rspBuffer_c/fifo/execute_to_memory_MEMORY_STORE_reg |                4 |             32 |         8.00 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu/_zz_IBusSimplePlugin_injector_decodeInput_payload_rsp_inst[31]_i_1_n_0                                        |                                                                                                    |               22 |             32 |         1.45 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu/IBusSimplePlugin_rspJoin_rspBuffer_c/fifo/decode_to_execute_INSTRUCTION_reg[24][0]                            |                                                                                                    |               10 |             33 |         3.30 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/jtagBridge_1/flowCCUnsafeByToggle_1/outputArea_flow_m2sPipe_valid_reg_1                                                  |                                                                                                    |                9 |             41 |         4.56 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_apbBridge/system_apbBridge_io_pipelinedMemoryBus_cmd_ready                                                        |                                                                                                    |               18 |             49 |         2.72 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu_dBus_cmd_ready                                                                                                |                                                                                                    |               28 |             67 |         2.39 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu/IBusSimplePlugin_rspJoin_rspBuffer_c/fifo/execute_to_memory_MEMORY_STORE_reg                                  |                                                                                                    |               39 |            117 |         3.00 |
+|  clk_100mhz_IBUF_BUFG |                                                                                                                                     | murax_inst/resetCtrl_systemReset                                                                   |               72 |            175 |         2.43 |
+|  clk_100mhz_IBUF_BUFG | murax_inst/system_cpu/IBusSimplePlugin_rspJoin_rspBuffer_c/fifo/execute_arbitration_isValid_reg                                     |                                                                                                    |               72 |            210 |         2.92 |
+|  clk_100mhz_IBUF_BUFG |                                                                                                                                     |                                                                                                    |              117 |            300 |         2.56 |
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+
