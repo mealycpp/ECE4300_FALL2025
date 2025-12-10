@@ -371,53 +371,6 @@ def plot_all_test_cases(test_cases):
     plt.tight_layout()
     plt.show()
 
-# =============================================================================
-# 
-# def run_all_test_cases():
-#     """Run all test cases"""
-#     
-#     print("="*70)
-#     print("PYTHON A* PATHFINDING - 8-CONNECTED")
-#     print("="*70)
-#     print("Grid Size: 16x16")
-#     print("Costs: Straight=10, Diagonal=14")
-#     print("Heuristic: Octile Distance")
-#     print()
-#     
-#     test_cases = [
-#         (1, "Simple diagonal path", build_test_case_1),
-#         (2, "Spiral maze", build_test_case_2),
-#         (3, "Dense random obstacles", build_test_case_3),
-#         (4, "Snake pattern", build_test_case_4),
-#         (5, "Rooms and corridors", build_test_case_5),
-#         (6, "Long diagonal corridor", build_test_case_6),
-#         (7, "No path (complete wall)", build_test_case_7),
-#     ]
-#     
-#     for test_num, test_name, builder_func in test_cases:
-#         print("="*70)
-#         print(f"TEST CASE {test_num}: {test_name}")
-#         print("="*70)
-#         
-#         obstacle_map, start, goal = builder_func()
-#         obstacle_count = np.sum(obstacle_map)
-#         
-#         pathfinder = AStarPathfinder(grid_size=16)
-#         path, path_map, stats = pathfinder.find_path(
-#             start[0], start[1], goal[0], goal[1], obstacle_map
-#         )
-#         
-#         print_metrics(stats, test_num, start, goal, obstacle_count)
-#         visualize_path(obstacle_map, path_map, start, goal)
-#         
-#         print()
-#     
-#     print("="*70)
-#     print("ALL TEST CASES COMPLETE")
-#     print("="*70)
-# 
-# =============================================================================
-
 if __name__ == "__main__":
     test_cases = [
         (1, "Simple diagonal path", build_test_case_1),
@@ -430,3 +383,4 @@ if __name__ == "__main__":
     ]
 
     plot_all_test_cases(test_cases)
+
