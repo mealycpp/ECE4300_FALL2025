@@ -1,0 +1,310 @@
+======================================================================
+PYTHON A* PATHFINDING - 8-CONNECTED
+======================================================================
+Grid Size: 16x16
+Costs: Straight=10, Diagonal=14
+Heuristic: Octile Distance
+
+======================================================================
+TEST CASE 1: Simple diagonal path
+======================================================================
+
+Test Configuration:
+  Start Position:        (0, 0)
+  Goal Position:         (7, 7)
+  Grid Size:             16x16 (256 nodes)
+  Obstacles:             0 (0.0%)
+
+[METRIC 1] Path Quality:
+  Path Found:            YES
+  Path Length:           8 nodes
+  Path Cost:             98
+
+[METRIC 2] Algorithm Efficiency:
+  Nodes Expanded:        8
+
+[METRIC 3] Computation Performance:
+  Time (μs):             111.82
+  Time (ms):             0.112
+  Time per Node:         13.98 μs/node
+
+Grid Visualization:
+S=Start, G=Goal, #=Obstacle, *=Path, .=Empty
+
+S . . . . . . . . . . . . . . . 
+. * . . . . . . . . . . . . . . 
+. . * . . . . . . . . . . . . . 
+. . . * . . . . . . . . . . . . 
+. . . . * . . . . . . . . . . . 
+. . . . . * . . . . . . . . . . 
+. . . . . . * . . . . . . . . . 
+. . . . . . . G . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+
+======================================================================
+TEST CASE 2: Spiral maze
+======================================================================
+
+Test Configuration:
+  Start Position:        (1, 1)
+  Goal Position:         (14, 14)
+  Grid Size:             16x16 (256 nodes)
+  Obstacles:             57 (22.3%)
+
+[METRIC 1] Path Quality:
+  Path Found:            YES
+  Path Length:           25 nodes
+  Path Cost:             248
+
+[METRIC 2] Algorithm Efficiency:
+  Nodes Expanded:        116
+
+[METRIC 3] Computation Performance:
+  Time (μs):             1135.83
+  Time (ms):             1.136
+  Time per Node:         9.79 μs/node
+
+Grid Visualization:
+S=Start, G=Goal, #=Obstacle, *=Path, .=Empty
+
+. . . . . . . . . . . . . . . . 
+. S . . . . . . . . . . . . . . 
+. * . # . . . . . . . . # . . . 
+. * # # # # # # . # # # # # . . 
+. * . # . . . . . . . . # . . . 
+. * . # . . . . . . . . # . . . 
+. * . # . # # # # # . . # . . . 
+. * . # . . # . . . # . # . . . 
+. * . # . . # . . . # . # . . . 
+. * . # . # . # # # # . # . . . 
+. * . # . . . . . . . . # . . . 
+. * . # . . . . . . . . # . . . 
+. * # # # # # # # # # # # # . . 
+. . * # . . . . . . . . # . . . 
+. . . * * * * * * * * * * * G . 
+. . . . . . . . . . . . . . . . 
+
+======================================================================
+TEST CASE 3: Dense random obstacles
+======================================================================
+
+Test Configuration:
+  Start Position:        (1, 1)
+  Goal Position:         (14, 14)
+  Grid Size:             16x16 (256 nodes)
+  Obstacles:             77 (30.1%)
+
+[METRIC 1] Path Quality:
+  Path Found:            YES
+  Path Length:           15 nodes
+  Path Cost:             188
+
+[METRIC 2] Algorithm Efficiency:
+  Nodes Expanded:        24
+
+[METRIC 3] Computation Performance:
+  Time (μs):             233.65
+  Time (ms):             0.234
+  Time per Node:         9.74 μs/node
+
+Grid Visualization:
+S=Start, G=Goal, #=Obstacle, *=Path, .=Empty
+
+# # # # . . . . . # . . . . . # 
+. S . # . . . . . . . # . . . . 
+. . * . . # # . . . # . . . . . 
+# . # * . # . . . . # # . . . . 
+. . # # * * # # # . . . . # . # 
+. . . . . # * . . . . . . . . # 
+. . . . # # # * . # # . # # . . 
+. . . . . . . # * # . . . . . . 
+. . . . . . # . . * # # . # # . 
+. # . . # . . . . . * # # . . . 
+. . . # # . # . # . # * . # . . 
+. . # . . . # # # # . * . . . . 
+# . . . . . . . . . # . * . . # 
+. # . . # . . # . . # . # * # . 
+# . . . . . # # # # . # . # G # 
+# # # # . . # . . . . # . . . . 
+
+======================================================================
+TEST CASE 4: Snake pattern
+======================================================================
+
+Test Configuration:
+  Start Position:        (0, 0)
+  Goal Position:         (15, 15)
+  Grid Size:             16x16 (256 nodes)
+  Obstacles:             135 (52.7%)
+
+[METRIC 1] Path Quality:
+  Path Found:            NO
+
+[METRIC 2] Algorithm Efficiency:
+  Nodes Expanded:        50
+
+[METRIC 3] Computation Performance:
+  Time (μs):             375.99
+  Time (ms):             0.376
+  Time per Node:         7.52 μs/node
+
+Grid Visualization:
+S=Start, G=Goal, #=Obstacle, *=Path, .=Empty
+
+S . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+# # # # # # # # # # # # # # # . 
+. . . . . . . . . . . . . . . . 
+. # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # # . 
+. . . . . . . . . . . . . . . . 
+. # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # # . 
+. . . . . . . . . . . . . . . . 
+. # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # # . 
+. . . . . . . . . . . . . . . . 
+. # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # # . 
+. . . . . . . . . . . . . . . G 
+
+======================================================================
+TEST CASE 5: Rooms and corridors
+======================================================================
+
+Test Configuration:
+  Start Position:        (2, 2)
+  Goal Position:         (13, 13)
+  Grid Size:             16x16 (256 nodes)
+  Obstacles:             54 (21.1%)
+
+[METRIC 1] Path Quality:
+  Path Found:            YES
+  Path Length:           14 nodes
+  Path Cost:             166
+
+[METRIC 2] Algorithm Efficiency:
+  Nodes Expanded:        38
+
+[METRIC 3] Computation Performance:
+  Time (μs):             359.54
+  Time (ms):             0.360
+  Time per Node:         9.46 μs/node
+
+Grid Visualization:
+S=Start, G=Goal, #=Obstacle, *=Path, .=Empty
+
+. . . . . . . . . . . . . . . . 
+. # # # # # # . . # # # # # . . 
+. # S . . . # . . . . . . . . . 
+. # . * . . . . . . . . . . . . 
+. # . . * . # . . . . . . . . . 
+. # . . . * # . . . . . . . . . 
+. # # . # # * . . # # # # # . . 
+. . . . . . . * . . . . . . . . 
+. . . . . . . . * . . . . . . . 
+. # # . # # . . * # # # # # # . 
+. . . . . . . . * # . . . . # . 
+. . . . . . . . . * * * . . # . 
+. . . . . . . . . # . . * . # . 
+. . . . . . . . . # . . . G # . 
+. # # # # # . . . # # # # # . . 
+. . . . . . . . . . . . . . . . 
+
+======================================================================
+TEST CASE 6: Long diagonal corridor
+======================================================================
+
+Test Configuration:
+  Start Position:        (0, 0)
+  Goal Position:         (15, 15)
+  Grid Size:             16x16 (256 nodes)
+  Obstacles:             210 (82.0%)
+
+[METRIC 1] Path Quality:
+  Path Found:            YES
+  Path Length:           16 nodes
+  Path Cost:             210
+
+[METRIC 2] Algorithm Efficiency:
+  Nodes Expanded:        16
+
+[METRIC 3] Computation Performance:
+  Time (μs):             356.67
+  Time (ms):             0.357
+  Time per Node:         22.29 μs/node
+
+Grid Visualization:
+S=Start, G=Goal, #=Obstacle, *=Path, .=Empty
+
+S . # # # # # # # # # # # # # # 
+. * . # # # # # # # # # # # # # 
+# . * . # # # # # # # # # # # # 
+# # . * . # # # # # # # # # # # 
+# # # . * . # # # # # # # # # # 
+# # # # . * . # # # # # # # # # 
+# # # # # . * . # # # # # # # # 
+# # # # # # . * . # # # # # # # 
+# # # # # # # . * . # # # # # # 
+# # # # # # # # . * . # # # # # 
+# # # # # # # # # . * . # # # # 
+# # # # # # # # # # . * . # # # 
+# # # # # # # # # # # . * . # # 
+# # # # # # # # # # # # . * . # 
+# # # # # # # # # # # # # . * . 
+# # # # # # # # # # # # # # . G 
+
+======================================================================
+TEST CASE 7: No path (complete wall)
+======================================================================
+
+Test Configuration:
+  Start Position:        (0, 0)
+  Goal Position:         (15, 15)
+  Grid Size:             16x16 (256 nodes)
+  Obstacles:             16 (6.2%)
+
+[METRIC 1] Path Quality:
+  Path Found:            NO
+
+[METRIC 2] Algorithm Efficiency:
+  Nodes Expanded:        112
+
+[METRIC 3] Computation Performance:
+  Time (μs):             1565.69
+  Time (ms):             1.566
+  Time per Node:         13.98 μs/node
+
+Grid Visualization:
+S=Start, G=Goal, #=Obstacle, *=Path, .=Empty
+
+S . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+# # # # # # # # # # # # # # # # 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . G 
+
+======================================================================
+ALL TEST CASES COMPLETE
+======================================================================
+
+
+** Process exited - Return Code: 0 **
