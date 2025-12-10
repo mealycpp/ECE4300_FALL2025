@@ -1,0 +1,292 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Wed Nov 26 04:10:02 2025
+# Process ID         : 655482
+# Current directory  : /home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.runs/petalinux_base_proc_sys_reset_0_3_synth_1
+# Command line       : vivado -log petalinux_base_proc_sys_reset_0_3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source petalinux_base_proc_sys_reset_0_3.tcl
+# Log file           : /home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.runs/petalinux_base_proc_sys_reset_0_3_synth_1/petalinux_base_proc_sys_reset_0_3.vds
+# Journal file       : /home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.runs/petalinux_base_proc_sys_reset_0_3_synth_1/vivado.jou
+# Running On         : ckpai
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.3 LTS
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-1370P
+# CPU Frequency      : 1835.169 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 16330 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 20625 MB
+# Available Virtual  : 11832 MB
+#-----------------------------------------------------------
+source petalinux_base_proc_sys_reset_0_3.tcl -notrace
+Command: synth_design -top petalinux_base_proc_sys_reset_0_3 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 655610
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2253.242 ; gain = 484.875 ; free physical = 392 ; free virtual = 6686
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'petalinux_base_proc_sys_reset_0_3' [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ip/petalinux_base_proc_sys_reset_0_3/synth/petalinux_base_proc_sys_reset_0_3.vhd:74]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
+	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at '/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1243' bound to instance 'U0' of component 'proc_sys_reset' [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ip/petalinux_base_proc_sys_reset_0_3/synth/petalinux_base_proc_sys_reset_0_3.vhd:139]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1302]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1371]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1387]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1413]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1436]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1460]
+INFO: [Synth 8-638] synthesizing module 'lpf' [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:821]
+INFO: [Synth 8-3491] module 'SRL16' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165318' bound to instance 'POR_SRL_I' of component 'SRL16' [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:873]
+INFO: [Synth 8-6157] synthesizing module 'SRL16' [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165318]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16' (0#1) [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165318]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'ACT_LO_EXT' of component 'xpm_cdc_single' [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:968]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (0#1) [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'ACT_LO_AUX' of component 'xpm_cdc_single' [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1015]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (0#1) [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:821]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:304]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:126]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (0#1) [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:126]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (0#1) [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:304]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (0#1) [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1302]
+INFO: [Synth 8-256] done synthesizing module 'petalinux_base_proc_sys_reset_0_3' (0#1) [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ip/petalinux_base_proc_sys_reset_0_3/synth/petalinux_base_proc_sys_reset_0_3.vhd:74]
+INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_single is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2345.180 ; gain = 576.812 ; free physical = 311 ; free virtual = 6193
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2357.055 ; gain = 588.688 ; free physical = 310 ; free virtual = 6181
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2357.055 ; gain = 588.688 ; free physical = 310 ; free virtual = 6181
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2362.992 ; gain = 0.000 ; free physical = 303 ; free virtual = 6164
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ip/petalinux_base_proc_sys_reset_0_3/petalinux_base_proc_sys_reset_0_3_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ip/petalinux_base_proc_sys_reset_0_3/petalinux_base_proc_sys_reset_0_3_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ip/petalinux_base_proc_sys_reset_0_3/petalinux_base_proc_sys_reset_0_3_board.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.gen/sources_1/bd/petalinux_base/ip/petalinux_base_proc_sys_reset_0_3/petalinux_base_proc_sys_reset_0_3_board.xdc] for cell 'U0'
+Parsing XDC File [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.runs/petalinux_base_proc_sys_reset_0_3_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.runs/petalinux_base_proc_sys_reset_0_3_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/petalinux_base_proc_sys_reset_0_3_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/petalinux_base_proc_sys_reset_0_3_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 2 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2468.793 ; gain = 0.000 ; free physical = 220 ; free virtual = 6005
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  SRL16 => SRL16E: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2468.828 ; gain = 0.000 ; free physical = 212 ; free virtual = 5998
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2468.828 ; gain = 700.461 ; free physical = 190 ; free virtual = 5930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2476.797 ; gain = 708.430 ; free physical = 190 ; free virtual = 5930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2476.797 ; gain = 708.430 ; free physical = 190 ; free virtual = 5930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2476.797 ; gain = 708.430 ; free physical = 184 ; free virtual = 5926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    6 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 3     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_single is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2476.797 ; gain = 708.430 ; free physical = 169 ; free virtual = 5913
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2526.797 ; gain = 758.430 ; free physical = 162 ; free virtual = 5687
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2527.797 ; gain = 759.430 ; free physical = 149 ; free virtual = 5673
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2555.844 ; gain = 787.477 ; free physical = 222 ; free virtual = 5635
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2723.656 ; gain = 955.289 ; free physical = 312 ; free virtual = 4915
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2723.656 ; gain = 955.289 ; free physical = 312 ; free virtual = 4915
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2723.656 ; gain = 955.289 ; free physical = 307 ; free virtual = 4910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2723.656 ; gain = 955.289 ; free physical = 307 ; free virtual = 4910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2723.656 ; gain = 955.289 ; free physical = 307 ; free virtual = 4910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2723.656 ; gain = 955.289 ; free physical = 307 ; free virtual = 4910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |LUT1  |     5|
+|2     |LUT2  |     9|
+|3     |LUT3  |     1|
+|4     |LUT4  |     6|
+|5     |LUT5  |     3|
+|6     |LUT6  |     1|
+|7     |SRL16 |     1|
+|8     |FDRE  |    36|
+|9     |FDSE  |     4|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2723.656 ; gain = 955.289 ; free physical = 307 ; free virtual = 4910
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2723.656 ; gain = 843.516 ; free physical = 306 ; free virtual = 4909
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2723.664 ; gain = 955.289 ; free physical = 306 ; free virtual = 4909
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2723.664 ; gain = 0.000 ; free physical = 305 ; free virtual = 4909
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2779.684 ; gain = 0.000 ; free physical = 710 ; free virtual = 5308
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  SRL16 => SRL16E: 1 instance 
+
+Synth Design complete | Checksum: fd6f72a3
+INFO: [Common 17-83] Releasing license: Synthesis
+44 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:20 . Memory (MB): peak = 2779.719 ; gain = 1152.273 ; free physical = 709 ; free virtual = 5308
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1666.738; main = 1666.738; forked = 205.317
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3471.000; main = 2779.688; forked = 994.199
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2803.695 ; gain = 0.000 ; free physical = 709 ; free virtual = 5308
+INFO: [Common 17-1381] The checkpoint '/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.runs/petalinux_base_proc_sys_reset_0_3_synth_1/petalinux_base_proc_sys_reset_0_3.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP petalinux_base_proc_sys_reset_0_3, cache-ID = 613b87c969d210e8
+INFO: [Coretcl 2-1174] Renamed 6 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2803.695 ; gain = 0.000 ; free physical = 698 ; free virtual = 5298
+INFO: [Common 17-1381] The checkpoint '/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.runs/petalinux_base_proc_sys_reset_0_3_synth_1/petalinux_base_proc_sys_reset_0_3.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file petalinux_base_proc_sys_reset_0_3_utilization_synth.rpt -pb petalinux_base_proc_sys_reset_0_3_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 26 04:10:28 2025...

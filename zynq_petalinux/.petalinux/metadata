@@ -1,0 +1,5 @@
+PETALINUX_VER=2024.2
+VALIDATE_HW_CHKSUM=1
+HARDWARE_PATH=/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/petalinux_base_wrapper.xsa
+HDF_EXT=xsa
+YOCTO_SDK=f20b3d97af7961e8a255990489779ec7e341165af8ded0845145cd1cbfa5b91f
