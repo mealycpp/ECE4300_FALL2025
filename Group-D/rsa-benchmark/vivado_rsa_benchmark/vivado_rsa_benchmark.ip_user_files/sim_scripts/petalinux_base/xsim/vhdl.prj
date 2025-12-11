@@ -1,0 +1,7 @@
+vhdl xil_defaultlib  \
+"../../../bd/petalinux_base/ip/petalinux_base_axi_gpio_0_0/sim/petalinux_base_axi_gpio_0_0.vhd" \
+"../../../bd/petalinux_base/ip/petalinux_base_smartconnect_0_2/bd_0/ip/ip_1/sim/bd_c62f_psr_aclk_0.vhd" \
+"../../../bd/petalinux_base/ip/petalinux_base_proc_sys_reset_0_2/sim/petalinux_base_proc_sys_reset_0_2.vhd" \
+
+# Do not sort compile order
+nosort

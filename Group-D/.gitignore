@@ -1,0 +1,138 @@
+###############################################################################
+# Unified .gitignore for Vivado, Vitis, and PetaLinux Projects
+# Safe to version: sources, constraints, TCLs, configs, scripts
+# Ignored: all build/output/runtime/generated artifacts
+###############################################################################
+
+# ---------------------------------------------------------------------------
+# Common editor/OS clutter
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+*.bak
+*~
+*.backup
+*.lock
+
+# ---------------------------------------------------------------------------
+# Vivado
+# ---------------------------------------------------------------------------
+*.jou
+*.log
+*.str
+*.xml
+*.html
+*.rpx
+*.zip
+*.wcfg
+*.dcp
+*.xpr
+*.xpr.lock
+*.sdk
+
+# Vivado generated directories
+.cache/
+.hw/
+.ip_user_files/
+.sim/
+.srcs/sources_1/bd/*/ip/
+.srcs/sources_1/bd/*/bd/
+.runs/
+.gen/
+.tmp/
+.webtalk/
+
+# Simulation and synthesis outputs
+*.bit
+*.bin
+*.mcs
+*.prm
+*.ltx
+*.tcl.backup
+*.csv
+*.svf
+
+# ---------------------------------------------------------------------------
+# Vitis
+# ---------------------------------------------------------------------------
+# Workspace metadata
+.metadata/
+.settings/
+.vscode/
+.cache/
+.project
+.cproject
+
+# Build directories
+/Debug/
+/Release/
+/build/
+/_export/
+/src/platform/
+/_vitis/
+
+# Logs and intermediates
+*.log
+*.jou
+*.str
+*.xml
+*.csv
+*.zip
+*.rpx
+*.ini
+*.wcfg
+*.xsa
+
+# Application outputs
+*.elf
+*.bin
+*.map
+*.o
+*.a
+
+# ---------------------------------------------------------------------------
+# PetaLinux
+# ---------------------------------------------------------------------------
+# Build artifacts and caches
+build/
+tmp/
+components/
+images/
+image/
+sstate-cache/
+downloads/
+sdk/
+pre-built/
+
+# Generated boot and image files
+BOOT.BIN
+image.ub
+u-boot.elf
+system.dtb
+system.bit
+system.xsa
+rootfs.cpio
+*.cpio
+*.ext4
+*.bin
+*.wic
+*.iso
+*.tar.gz
+*.tar.bz2
+*.zip
+
+# Config and recipe temp files
+*.bblayers.backup
+*.config.old
+petalinux_project/project-spec/meta-user/recipes-apps/*/temp/
+
+# Logs and backups
+*.log
+*.bak
+
+###############################################################################
+# End of unified Vivado + Vitis + PetaLinux .gitignore
+###############################################################################

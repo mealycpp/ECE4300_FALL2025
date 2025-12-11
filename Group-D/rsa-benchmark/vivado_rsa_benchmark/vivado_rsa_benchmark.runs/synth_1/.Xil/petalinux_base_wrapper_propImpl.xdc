@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:/home/ckpai/ece4300/rsa-benchmark/vivado_rsa_benchmark/vivado_rsa_benchmark.srcs/constrs_1/new/pynq_constraints.xdc rfile:../../../vivado_rsa_benchmark.srcs/constrs_1/new/pynq_constraints.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN R14 [get_ports {led_gpio_tri_o[0]}]
+set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN P14 [get_ports {led_gpio_tri_o[1]}]
